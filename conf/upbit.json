@@ -1,0 +1,26 @@
+{
+    "limit": {
+        "api": {
+            "exchange": {
+                "trade": {
+                    "per_sec": 8,
+                    "per_min": 200
+                },
+                "non_trade": {
+                    "per_sec": 30,
+                    "per_min": 900
+                }
+            },
+            "quotation": {
+                "websocket": {
+                    "per_sec": 5,
+                    "per_min": 100
+                },
+                "rest_api": {
+                   "per_sec": 10,
+                    "per_min": 600
+                }
+            }
+        }
+    }
+}
