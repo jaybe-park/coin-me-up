@@ -1,0 +1,4 @@
+DROP SCHEMA IF EXISTS cmu;
+CREATE SCHEMA cmu;
+USE cmu;
+

@@ -10,6 +10,26 @@ services:
       backend_network:
         ipv4_address: 192.168.0.10 
 
+  mysql:
+    image: mysql:5.7
+    container_name: cmu-mysql01
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=cmu
+      - MYSQL_ROOT_PASSWORD=password
+      - TZ=Asia/Seoul
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./conf.d:/etc/mysql/conf.d
+      - ./init/:/docker-entrypoint-initdb.d
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    networks: 
+      backend_network:
+        ipv4_address: 192.168.0.11
+
 networks: 
   backend_network:
     name: backend
