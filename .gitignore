@@ -1,5 +1,7 @@
 # Project
 conf/key.json
+docker/mysql_data
+
 
 # Personal
 *testspace*
